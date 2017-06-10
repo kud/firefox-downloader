@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/kud/firefox-downloader/issues"
   },
-  "homepage": "https://github.com/kud/firefox-downloader#readme"
+  "homepage": "https://github.com/kud/firefox-downloader#readme",
+  "dependencies": {
+    "cheerio": "1.0.0-rc.1",
+    "request": "2.81.0",
+    "term-list": "0.2.1",
+    "vorpal": "1.12.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.5.2"
+  }
 }
