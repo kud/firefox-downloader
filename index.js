@@ -31,14 +31,18 @@ const handleKeyPressList = props => {
         request(`${BASE_URL}${item}`).pipe(w)
 
         w.on("finish", () => {
-          const _child = child.exec(`hdiutil -quiet attach /tmp/${fileName}`)
+          console.log(fileName)
+
+          const _child = child.exec(`hdiutil attach -quiet /tmp/${fileName}`)
 
           _child.on("close", () => {
             const __child = child.exec(
-              'cp -Rf "/Volumes/Nightly/FirefoxNightly.app" /Applications/FirefoxNightlyBackup.app',
+              'cp -Rf "/Volumes/Firefox Nightly/Firefox Nightly.app" /Applications/Firefox Nightly.app',
             )
 
             __child.on("close", () => {
+              child.exec(`hdiutil detach -quiet "/Volumes/Firefox Nightly"`)
+
               console.log("Finished!")
             })
           })
