@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/kud/firefox-downloader.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Erwann Mest",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kud/firefox-downloader/issues"
   },
