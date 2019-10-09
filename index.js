@@ -9,10 +9,7 @@ const BASE_URL = "http://ftp.mozilla.org"
 const START_URL = "http://ftp.mozilla.org/pub/firefox/nightly"
 
 const handleKeyPressList = props => {
-  const key = props.key
-  const item = props.item
-  const list = props.list
-  const url = props.url
+  const { key, item, list, url } = props
 
   switch (key.name) {
     case "return":
